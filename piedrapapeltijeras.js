@@ -1,10 +1,8 @@
 let opciones= ["piedra", "papel", "tijeras"];
-//let jugador = null;
 
 const eleccionHumano = ()=> prompt();
 
 function juegaPc(){
-    //genera la eleccion aleatoria de la PC
     let eleccionPC=opciones[Math.floor(Math.random()*3)];
     return eleccionPC
 }
