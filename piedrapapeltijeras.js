@@ -1,5 +1,5 @@
 let opciones= ["piedra", "papel", "tijeras"];
-let jugador = null;
+//let jugador = null;
 
 const eleccionHumano = ()=> prompt();
 
@@ -30,6 +30,7 @@ const verificaEleccionUsuario = eleccion =>{
 }
 
 export const piedraPapelTijeras = ()=>{
+    let jugador = null;
     while(verificaEleccionUsuario(jugador)==false){
         console.log("Por favor, elige entre: piedra, papel o tijeras");
         jugador = eleccionHumano();
