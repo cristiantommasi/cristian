@@ -22,7 +22,7 @@ const verificaGanador = (jugador, pc)=>{
 }
 
 const verificaEleccionUsuario = eleccion =>{
-    if ((eleccion==opciones[0])||(eleccion == opciones[1])||(eleccion==opciones[2])){
+    if (opciones.includes(eleccion)){
         return true
     } else {
         return false

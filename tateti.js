@@ -2,6 +2,7 @@ let jugadas=[" "," "," "," "," "," "," "," "," "];
 let jugador1= "";
 let jugador2= "";
 let turno="";
+
 const inicio =()=>{
     console.log(`
      bienvenido al juego de
