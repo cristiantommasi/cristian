@@ -1,10 +1,8 @@
 let opciones= ["piedra", "papel", "tijeras"];
-let jugador = null;
 
 const eleccionHumano = ()=> prompt();
 
 function juegaPc(){
-    //genera la eleccion aleatoria de la PC
     let eleccionPC=opciones[Math.floor(Math.random()*3)];
     return eleccionPC
 }
@@ -17,7 +15,7 @@ const verificaGanador = (jugador, pc)=>{
                (jugador==opciones[2]) && (pc==opciones[1])){
       return console.log("Ganaste. Elegiste: " + jugador + " y la PC eligio: " + pc);
     }else{
-        return console.log("Perdiste. Elegiste " + jugador + " y la PC eligio " + pc + ",");
+        return console.log("Perdiste. Elegiste: " + jugador + " y la PC eligio: " + pc + ",");
     }
 }
 
@@ -30,9 +28,10 @@ const verificaEleccionUsuario = eleccion =>{
 }
 
 export const piedraPapelTijeras = ()=>{
+    let jugador = null;
     while(verificaEleccionUsuario(jugador)==false){
         console.log("Por favor, elige entre: piedra, papel o tijeras");
-        jugador = eleccionHumano();
+        jugador = eleccionHumano("Ingresa tu eleccion:");
     }    
     let pc=juegaPc();
     return verificaGanador(jugador,pc);

@@ -104,7 +104,7 @@ export const tateti = ()=>{
     inicio()
     eligeFicha()
     mostrarFichas()
-    mostrarTablero()
+    alert("¿estas listo listo para comenzar?")
     if(jugador1==="X"){
         turno=jugador1;
         //console.log(turno);
@@ -115,12 +115,16 @@ export const tateti = ()=>{
     let partida=true;
     while(partida){
         if(tableroLleno()){
+            console.clear()
+            mostrarTablero()
             console.log("La partida ha terminado en un empate.");
             partida=false
         }else if(turno==jugador1){
+            console.clear()
+            mostrarTablero()
             alert(`Es el turno de la ficha: "${jugador1}"`);
             while(true){
-            let casilla=movimientoJugador();
+                let casilla=movimientoJugador();
                 if(!casilla && typeof(casilla)=="boolean"){
                     console.log("la casilla esta ocupada");
                 }else{
@@ -136,6 +140,8 @@ export const tateti = ()=>{
                 partida=false;
             }
         }else{
+            console.clear()
+            mostrarTablero()
             alert(`Es el turno de la ficha: "${jugador2}"`);
             while(true){
                 let casilla=movimientoJugador();
@@ -144,8 +150,8 @@ export const tateti = ()=>{
                 }else{
                     jugadas[casilla]=jugador2;
                     break;
+                    }
                 }
-            }
                 turno=jugador1;
                 console.clear()
                 console.log(mostrarTablero());

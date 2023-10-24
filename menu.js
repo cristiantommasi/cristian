@@ -13,15 +13,16 @@ console.log(`:::::: Selecciona el juego que deseas ::::::
         5. Salir`);
 }
 
-let jugar = true;
-alert("bienvenido.")
-while (jugar){
-    console.clear()
-    let seguir = true;
-    let termina = true
-    menu()
-    while(termina){
-        let election = prompt('Elige el juego al cual deseas ingresar.')
+const main = ()=>{
+    let jugar = true;
+    alert("bienvenido.")
+    while (jugar){
+        console.clear()
+        let seguir = true;
+        let termina = true
+        menu()
+        while(termina){
+            let election = prompt('Elige el juego al cual deseas ingresar.')
 
         switch (election) {
         case "1":
@@ -29,17 +30,18 @@ while (jugar){
             ahorcado()
             termina=false
             continue;
-            case "2":
+        case "2":
             console.clear()
             piedraPapelTijeras()
             termina=false
             continue;
-            case "3":
+        case "3":
                 console.clear()
                 tateti()
                 termina=false
                 continue;
-            case "4":
+        case "4":
+
             console.clear()
             adivinaClave()
             termina=false
@@ -52,21 +54,24 @@ while (jugar){
         default:
             console.log("La opcion ingresada es invalida.");
         }
-    }
 
-    while(seguir){
-        console.log("¿deseas seguir jugando?");
-        let choice = prompt("SI, para continuar. NO, para abandonar y salir.");
-        if(choice.toUpperCase() === "SI"){
-            seguir = false
-            continue;
-        }else if(choice.toUpperCase()==="NO"){
-            jugar=false;
-            break;
-        }else{
-            console.log("No ingresaste una opcion valida.");
+        while(seguir){
+            console.log("¿deseas volver al menu principal (si) o abandonar nuestra aplicacion (no)?");
+            let choice = prompt("SI, para continuar jugando. NO, para abandonar y salir.");
+            if(choice.toUpperCase() === "SI"){
+                seguir = false
+                continue;
+            }else if(choice.toUpperCase()==="NO"){
+                jugar=false;
+                break;
+            }else{
+                console.log("No ingresaste una opcion valida.");
+                console.log("recuerda ingresar (si) para continuar hacia el menu, o (no) para abandonar la aplicacion.");
+            }
         }
     }
 }
+
+main()
 
 console.log("gracias por tu visita!!!");
