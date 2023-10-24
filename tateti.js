@@ -133,6 +133,7 @@ export const tateti = ()=>{
                 }
             }
             turno=jugador2;
+            console.clear()
             console.log(mostrarTablero());
             if(hayGanador(jugador1,jugadas)){
                 console.log(`Felicitaciones. El jugador que eligio la ficha "${jugador1}" ha ganado.`);
@@ -148,10 +149,11 @@ export const tateti = ()=>{
                     console.log("la casilla esta ocupada");
                 }else{
                     jugadas[casilla]=jugador2;
-                        break;
+                    break;
                     }
                 }
                 turno=jugador1;
+                console.clear()
                 console.log(mostrarTablero());
                 if(hayGanador(jugador2,jugadas)){
                     console.log(`Felicitaciones. El jugador que eligio la ficha "${jugador2}" ha ganado.`);
