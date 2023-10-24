@@ -36,6 +36,7 @@ export const numberRamdom= a => Math.floor(Math.random()*a.length)
 
     welcome();
     alert("Enter para continuar...")
+    console.clear()
     
     while (fallos<MAX_FALLOS && palabra !== secreto) {
         console.log(`esta es la palabra secreta: ${secreto}`);

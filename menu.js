@@ -1,6 +1,7 @@
 import {ahorcado} from "./ahorcado.js"
 import {tateti} from "./tateti.js"
 import {piedraPapelTijeras} from "./piedrapapeltijeras.js"
+import {adivinaClave} from "./adivinaClave.js";
 
 const menu = () =>{
 console.log(`:::::: Selecciona el juego que deseas ::::::
@@ -24,19 +25,23 @@ while (jugar){
 
         switch (election) {
         case "1":
+            console.clear()
             ahorcado()
             termina=false
             continue;
-        case "2":
+            case "2":
+            console.clear()
             piedraPapelTijeras()
             termina=false
             continue;
-        case "3":
-            tateti()
-            termina=false
-            continue;
-        case "4":
-            findNumber()
+            case "3":
+                console.clear()
+                tateti()
+                termina=false
+                continue;
+            case "4":
+            console.clear()
+            adivinaClave()
             termina=false
             continue;
         case "5":
